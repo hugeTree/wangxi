@@ -1,0 +1,15 @@
+//
+//  Wangxi.pch
+//  往昔
+//
+//  Created by 干晨威 on 16/2/5.
+//  Copyright © 2016年 干晨威. All rights reserved.
+//
+
+#ifndef Wangxi_pch
+#define Wangxi_pch
+
+#import <UIKit/UIKit.h>
+#import "Common.h"
+
+#endif /* Wangxi_pch */

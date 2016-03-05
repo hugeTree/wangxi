@@ -1,0 +1,16 @@
+//
+//  TodayDetailViewController.h
+//  往昔
+//
+//  Created by 干晨威 on 16/2/10.
+//  Copyright © 2016年 干晨威. All rights reserved.
+//
+
+#import "BaseViewController.h"
+#import "TodayDetailView.h"
+
+@interface TodayDetailViewController : BaseViewController
+
+@property (nonatomic, strong) TodayDetailView *todayDetailView;
+
+@end

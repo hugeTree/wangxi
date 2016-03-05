@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eWX-Vr-zKL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="UAV-I0-ju5">
+            <objects>
+                <navigationController id="eWX-Vr-zKL" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tdz-gX-21t">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="YIf-U6-dUK" kind="relationship" relationship="rootViewController" id="cbY-d8-J24"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYK-fu-Hit" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-373" y="-267"/>
+        </scene>
+        <!--Today View Controller-->
+        <scene sceneID="h1H-f0-HDz">
+            <objects>
+                <viewController id="YIf-U6-dUK" customClass="TodayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zuO-os-jZy"/>
+                        <viewControllerLayoutGuide type="bottom" id="CPh-BG-abu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SyU-aQ-AMI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="byg-5f-tws" customClass="TodayTableView">
+                                <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="byg-5f-tws" firstAttribute="top" secondItem="zuO-os-jZy" secondAttribute="bottom" id="M53-6r-iMl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="byg-5f-tws" secondAttribute="trailing" constant="-20" id="O2C-KX-Dag"/>
+                            <constraint firstItem="byg-5f-tws" firstAttribute="leading" secondItem="SyU-aQ-AMI" secondAttribute="leadingMargin" constant="-20" id="ZRz-28-uLR"/>
+                            <constraint firstItem="CPh-BG-abu" firstAttribute="top" secondItem="byg-5f-tws" secondAttribute="bottom" id="iXR-68-obR"/>
+                            <constraint firstItem="byg-5f-tws" firstAttribute="top" secondItem="zuO-os-jZy" secondAttribute="bottom" id="kgh-nk-f7r"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="M53-6r-iMl"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <navigationItem key="navigationItem" id="fSP-gw-EHR"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="todayTableView" destination="byg-5f-tws" id="yxV-iU-dKG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bL-Ne-IVy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320" y="-266"/>
+        </scene>
+    </scenes>
+</document>

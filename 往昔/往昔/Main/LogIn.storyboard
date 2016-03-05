@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="1YK-py-Elq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--Base Navigation Controller-->
+        <scene sceneID="Ziu-Rb-xFb">
+            <objects>
+                <navigationController storyboardIdentifier="LogInViewController" id="1YK-py-Elq" customClass="BaseNavigationController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rCR-JK-jcr">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="kI9-qo-tOX" kind="relationship" relationship="rootViewController" id="tww-gk-mWC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2bY-Nj-uBk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1197" y="-130"/>
+        </scene>
+        <!--Log In View Controller-->
+        <scene sceneID="N9D-bv-s8z">
+            <objects>
+                <viewController id="kI9-qo-tOX" customClass="LogInViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nKX-uP-P3I"/>
+                        <viewControllerLayoutGuide type="bottom" id="8bT-d0-oX6"/>
+                    </layoutGuides>
+                    <view key="view" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="VP1-9A-cii">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UBn-mQ-FQ6">
+                                <rect key="frame" x="105" y="400" width="110" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="110" id="RTD-2W-Q1U"/>
+                                    <constraint firstAttribute="height" constant="30" id="fHh-kn-hSf"/>
+                                </constraints>
+                                <state key="normal" title="登陆"/>
+                                <connections>
+                                    <action selector="logIn:" destination="kI9-qo-tOX" eventType="touchUpInside" id="KQY-Yn-5uk"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aCl-zB-bh0">
+                                <rect key="frame" x="8" y="301" width="304" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="304" id="JNw-ZV-mCQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="b9k-39-klI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kI9-qo-tOX" id="Pyf-65-eNS"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h8h-hY-lyY">
+                                <rect key="frame" x="8" y="339" width="304" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="WYc-Tv-cx4"/>
+                                    <constraint firstAttribute="width" constant="304" id="eDh-cl-CPH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="kI9-qo-tOX" id="afN-wT-kuc"/>
+                                </connections>
+                            </textField>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vRK-Ma-rvl">
+                                <rect key="frame" x="40" y="115" width="240" height="128"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4yI-43-t0E"/>
+                                    <constraint firstAttribute="height" constant="128" id="a0V-eq-gd1"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vRK-Ma-rvl" firstAttribute="centerX" secondItem="VP1-9A-cii" secondAttribute="centerX" id="2hc-XJ-mBW"/>
+                            <constraint firstItem="h8h-hY-lyY" firstAttribute="centerX" secondItem="VP1-9A-cii" secondAttribute="centerX" id="9DZ-bW-SzM"/>
+                            <constraint firstItem="h8h-hY-lyY" firstAttribute="top" secondItem="aCl-zB-bh0" secondAttribute="bottom" constant="8" id="BKq-Ab-5cH"/>
+                            <constraint firstItem="UBn-mQ-FQ6" firstAttribute="top" secondItem="h8h-hY-lyY" secondAttribute="bottom" constant="31" id="KAA-SG-KAq"/>
+                            <constraint firstItem="vRK-Ma-rvl" firstAttribute="top" secondItem="VP1-9A-cii" secondAttribute="top" constant="115" id="O2R-J1-ONQ"/>
+                            <constraint firstItem="aCl-zB-bh0" firstAttribute="top" secondItem="vRK-Ma-rvl" secondAttribute="bottom" constant="58" id="SYt-KC-cHD"/>
+                            <constraint firstItem="UBn-mQ-FQ6" firstAttribute="centerX" secondItem="VP1-9A-cii" secondAttribute="centerX" id="l1b-k3-dea"/>
+                            <constraint firstItem="aCl-zB-bh0" firstAttribute="centerX" secondItem="VP1-9A-cii" secondAttribute="centerX" id="pG9-B0-xef"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="RMv-lL-hxM"/>
+                    <connections>
+                        <outlet property="imageView" destination="vRK-Ma-rvl" id="vQf-h1-5kZ"/>
+                        <outlet property="nameText" destination="aCl-zB-bh0" id="zGD-5X-hYC"/>
+                        <outlet property="passwordText" destination="h8h-hY-lyY" id="ezX-eF-dfg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ioD-hK-xco" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-704" y="-130"/>
+        </scene>
+    </scenes>
+</document>
